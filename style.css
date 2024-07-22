@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, rgb(0, 4, 40), rgb(0, 78, 146));
+}
+
+/* Navbar code Starts Here */
+
+.navbar {
+    width: 100vw;
+    height: 10vh;
+    background: linear-gradient(90deg, rgb(15, 12, 31) 0%, rgb(26, 17, 100) 50%, rgb(24, 8, 146) 100%);
+    display: inline-flex;
+    align-items: center;
+    padding: 2vw;
+    color: aliceblue;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.navtitle {
+    font-weight: 600;
+    font-size: 2vw;
+}
+
+.navcontent {
+    margin-left: auto;
+
+    label {
+        font-size: 1.6vw;
+        font-weight: 0;
+        margin-left: 2vw;
+        cursor: pointer;
+        color: aqua;
+
+    }
+}
+
+/* Analog Clock Css Starts Here */
+
+.analogbody {
+    margin: auto;
+    margin-top: 2vh;
+    height: 41vw;
+    width: 41vw;
+    border-radius: 50%;
+    border: 10px solid rgb(171, 47, 22);
+    position: relative;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.analogbody:hover {
+    background-color: #141650;
+}
+
+.number12 {
+    position: absolute;
+    top: 0.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number9 {
+    position: absolute;
+    left: 0.5vw;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.number6 {
+    position: absolute;
+    bottom: 0.4vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number3 {
+    position: absolute;
+    top: 50%;
+    right: 1vw;
+    transform: translateY(-50%);
+}
+
+.dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.onedot,
+.twodot,
+.fourdot,
+.fivedot,
+.sevendot,
+.eightdot,
+.tendot,
+.elevendot {
+    position: absolute;
+    width: 1vw;
+    height: 1.5vw;
+    background-color: rgb(171, 47, 22);
+
+}
+
+.onedot {
+    top: 7%;
+    left: 75%;
+    rotate: 30deg;
+}
+
+.twodot {
+    top: 25%;
+    left: 92%;
+    rotate: 60deg;
+}
+
+.fourdot {
+    top: 73%;
+    left: 91%;
+    rotate: 120deg;
+}
+
+.fivedot {
+    top: 91%;
+    left: 73%;
+    rotate: 150deg;
+}
+
+.sevendot {
+    left: 25%;
+    top: 91.5%;
+    rotate: 30deg;
+}
+
+.eightdot {
+    top: 73%;
+    left: 6%;
+    rotate: 60deg;
+}
+
+.tendot {
+    left: 5%;
+    top: 25%;
+    rotate: 120deg;
+}
+
+.elevendot {
+    top: 6%;
+    left: 23%;
+    rotate: 150deg;
+}
+
+.hourhand,
+.minutehand,
+.secondhand {
+    position: absolute;
+    width: 0.7vw;
+    height: 10vw;
+    background-color: #fff;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+    background-color: #be1515;
+    border-radius: 10px;
+}
+
+.minutehand {
+    height: 15vw;
+    top: 12%;
+    background-color: rgb(10, 188, 135);
+}
+
+.secondhand {
+    height: 13vw;
+    width: 0.4vw;
+    top: 17%;
+    background-color: rgb(135, 10, 188);
+}
+
+/* Analog Clock Code Ends Here */
+
+
+/* Digital Clock Code Starts Here */
+.digitalbody {
+    margin: auto;
+    margin-top: 20vh;
+    height: 21vw;
+    width: 51vw;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5vw;
+    position: relative;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    /* display: none; */
+    background-color: #0c0d2e;
+    opacity: 0.4;
+
+    display: grid;
+    place-items: center;
+    font-size: 11vw;
+    letter-spacing: 3px;
+    /* color: rgb(5, 4, 35); */
+    transition: opacity 0.7s ease-in-out;
+    box-shadow: 5px 10px 8px 10px#0c0d2e;
+    display: none;
+}
+
+.digitalbody:hover {
+    background-color: #141650;
+}
+
+/* Digital Clock Code Ends Here */
+
+
+/* Timer Code Starts Here */
+
+.timer {
+    margin: auto;
+    margin-top: 3vh;
+    height: 38vw;
+    width: 71vw;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5vw;
+    position: relative;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #0c0d2e;
+    opacity: 0.4;
+    display: grid;
+    place-items: center;
+    font-size: 11vw;
+    letter-spacing: 3px;
+    transition: opacity 0.7s ease-in-out;
+    box-shadow: 5px 10px 8px 10px #0c0d2e;
+    display: none;
+}
+
+.timer:hover {
+    background-color: #141650;
+}
+
+.timertimebody {
+    background-color: #0c0d2e;
+    opacity: 0.4;
+    margin: auto;
+    height: 18vw;
+    width: 51vw;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5vw;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timertimebody select {
+    font-size: 9vw;
+    border-radius: 2vw;
+    /* margin: 0 1vw; */
+    background-color: #141650;
+    color: white;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.timertimebody span {
+    font-size: 9vw;
+    margin: 0 1vw;
+}
+
+.timerstartbutton {
+    width: 15vw;
+    /* height: 28vh; */
+    font-size: 10vw;
+    margin: auto;
+    border: 3px solid #68699a;
+    display: grid;
+    place-items: center;
+    border-radius: 5vw;
+    cursor: pointer;
+    background-color: #141650;
+}
+
+.timerstartbutton label {
+    cursor: pointer;
+    margin-left: 13px;
+    margin-top: 4px;
+}
+
+.mainbtn{
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tsb{
+    label{
+        margin-left: 5px;
+        height: 26vh;
+    }
+}
+
+
+.stopwatch{
+    margin: auto;
+    margin-top: 3vh;
+    height: 38vw;
+    width: 71vw;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5vw;
+    position: relative;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #0c0d2e;
+    opacity: 0.4;
+    display: grid;
+    place-items: center;
+    font-size: 10vw;
+    letter-spacing: 3px;
+    transition: opacity 0.7s ease-in-out;
+    box-shadow: 5px 10px 8px 10px #0c0d2e;
+    display: none;
+}
+
+
+.st{
+    margin-left: 2vw;
+    font-size: 10vw;
+}
